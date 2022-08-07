@@ -2,19 +2,69 @@
   "name": "vue3-nativeui-admin",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.37"
+    "axios": "^0.27.2",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.4",
+    "lodash-es": "^4.17.21",
+    "pinia": "^2.0.17",
+    "pinia-plugin-persist": "^1.0.0",
+    "rollup-plugin-visualizer": "^5.7.1",
+    "sass": "^1.54.3",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.25.2",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@iconify/json": "^2.1.78",
+    "@iconify/vue": "^3.2.1",
+    "@types/crypto-js": "^4.1.1",
+    "@types/lodash-es": "^4.17.6",
+    "@types/node": "^18.0.4",
     "@vitejs/plugin-vue": "^3.0.0",
+    "@vueuse/core": "^9.1.0",
+    "colord": "^2.9.2",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.9.1",
+    "eslint": "^8.19.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "mockjs": "^1.1.0",
+    "naive-ui": "^2.31.0",
+    "rollup-plugin-visualizer": "^5.7.1",
+    "sass": "^1.53.0",
     "typescript": "^4.6.4",
-    "vite": "^3.0.0",
+    "unocss": "^0.44.2",
+    "unplugin-auto-import": "^0.9.3",
+    "unplugin-icons": "^0.14.7",
+    "unplugin-vue-components": "^0.21.1",
+    "unplugin-vue-define-options": "^0.6.2",
+    "vite": "^3.0.4",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-mock": "^2.9.6",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vue-tsc": "^0.38.4"
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --ext .js,.ts,.vue ."
+    ]
   }
 }
